@@ -182,37 +182,37 @@
 // Display a list of products sorted by price (ascending/descending toggle via button).
 
 
-const products = [
-  { name: "Laptop", price: 120000 },
-  { name: "Mobile", price: 60000 },
-  { name: "Headphones", price: 8000 },
-  { name: "Keyboard", price: 4500 },
-  { name: "Monitor", price: 30000 }
-];
+// const products = [
+//   { name: "Laptop", price: 120000 },
+//   { name: "Mobile", price: 60000 },
+//   { name: "Headphones", price: 8000 },
+//   { name: "Keyboard", price: 4500 },
+//   { name: "Monitor", price: 30000 }
+// ];
 
-let isAscending = true;
+// let isAscending = true;
 
-function sortProducts()
-{
-  if(isAscending){
-    products.sort((a,b) => a.price - b.price);
-  }else{
-    products.sort((a,b) => b.price - a.price);
-  }
-  isAscending = !isAscending;
-  displayproducts();
-}
+// function sortProducts()
+// {
+//   if(isAscending){
+//     products.sort((a,b) => a.price - b.price);
+//   }else{
+//     products.sort((a,b) => b.price - a.price);
+//   }
+//   isAscending = !isAscending;
+//   displayproducts();
+// }
 
-function displayproducts()
-{
-  const list = document.getElementById("list")
-  list.innerHTML = "";
+// function displayproducts()
+// {
+//   const list = document.getElementById("list")
+//   list.innerHTML = "";
 
-  products.forEach(product =>{
-    list.innerHTML += `<li>${product.name} - Rs ${product.price}</li>`;
-  });
+//   products.forEach(product =>{
+//     list.innerHTML += `<li>Name: ${product.name} - Rs ${product.price}</li>`;
+//   });
 
-}
+// }
 
 
 
@@ -220,6 +220,25 @@ function displayproducts()
 // Create a form with name, email, and age. On submit, convert the input into an object
 // and show the result.
 
+// const form = document.getElementById("userForm");
+// const output = document.getElementById("output");
+
+// form.addEventListener("submit",function(event){
+
+//   event.preventDefault();
+
+//   const user = {
+//     Name: document.getElementById("name").value,
+//     Email: document.getElementById("email").value,
+//     age: Number(document.getElementById("age").value)
+//   };
+
+//   // output.textContent = JSON.stringify(user,Null,2);
+//   output.innerHTML =
+//   "Name: " + user.Name + "<br>" +
+//   "Email: " + user.Email + "<br>" +
+//   "Age: " + user.age;
+// });
 
 
 
@@ -227,22 +246,115 @@ function displayproducts()
 // Given a nested object like a user with address, display all info in a structured format in
 // the DOM.
 
+// const user = {
+//   name: "Mozam",
+//   email: "mozam@example.com",
+//   age: 20,
+//   address: {
+//     city: "Quetta",
+//     street: "Jinnah Road",
+//     zip: "87300"
+//   }
+// };
+
+// const output = document.getElementById("output");
+
+// output.innerHTML = `
+//   <h2>User Information</h2>
+//   <p><strong>Name:</strong>${user.name}</p>
+//   <p><strong>Email:</strong>${user.emil}</p>
+//   <p><strong>Name:</strong>${user.age}</p>
+
+//   <h3>Address</h3>
+//   <p><strong>City:</strong> ${user.address.city}</p>
+//   <p><strong>Street:</strong> ${user.address.street}</p>
+//   <p><strong>Zip:</strong> ${user.address.zip}</p>
+// `
+
 
 
 // 9. Calculate Cart Total
 // Given an array of cart items ({name, price, quantity}), display a full cart with
 // totals using DOM.
 
+// const cart = [
+//   { name: "Laptop", price: 120000, quantity: 1 },
+//   { name: "Mouse", price: 1500, quantity: 2 },
+//   { name: "Keyboard", price: 4500, quantity: 1 }
+// ];
+
+// const cartBody = document.getElementById("cartBody");
+// const grandTotalEl = document.getElementById("grandTotal");
+
+// let grandTotal = 0;
+
+// cart.forEach(item => {
+//   const itemTotal = item.price * item.quantity;
+//   grandTotal += itemTotal;
+
+//   cartBody.innerHTML += `
+//   <tr>
+//       <td>${item.name}</td>
+//       <td>Rs ${item.price}</td>
+//       <td>${item.quantity}</td>
+//       <td>Rs ${itemTotal}</td>
+//   </tr>
+//   `;
+
+// });
+// grandTotalEl.innerHTML = `Grand Total: Rs ${grandTotal}`;
 
 
 // 10. Checkbox Filter
 // Display a list of items. Use checkboxes to filter them (e.g., categories like "Fruits",
 // "Vegetables").
 
+// const items = [
+//   { name: "Apple", category: "Fruits" },
+//   { name: "Banana", category: "Fruits" },
+//   { name: "Carrot", category: "vegetables" },
+//   { name: "Potato", category: "vegetables" }
+// ];
+
+// const list = document.getElementById("itemList");
+// const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+// console.log(checkboxes.length)
+
+// function renderItems()
+// {
+//   list.innerHTML="";
+
+
+// //get checked categories
+// let selectedCategories = [];
+
+// checkboxes.forEach(cb => {
+//   if(cb.checked){
+//     selectedCategories.push(cb.value);
+//   }
+// });
+
+// // filter and display
+
+// items.forEach(item =>{
+//   if(selectedCategories.includes(item.category)){
+//     list.innerHTML += `<li>${item.name} (${item.category})</li>`
+//   }
+// });
+// }
+
+// checkboxes.forEach(cb=>{
+//   cb.addEventListener("change",renderItems)
+// })
+
+// renderItems();
+
 
 // ️ DOM Interaction + Objects + Events
 // 11. Live Search List
 // From an array of names or products, filter the list as the user types into an input field.
+
+
 
 
 // 12. To-Do App with Object Tasks
